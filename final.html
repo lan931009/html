@@ -1,0 +1,283 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>永劫無間 | Naraka: Bladepoint</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #222;
+            color: #fff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            gap: 1rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+        }
+
+        nav a:hover {
+            background: #444;
+            border-radius: 5px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #444;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            padding: 0.5rem;
+        }
+
+        .dropdown-content a:hover {
+            background: #555;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .carousel {
+            position: relative;
+            max-width: 100%;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 300%; /* 總寬度為圖片數量的三倍 */
+        }
+
+        .carousel img {
+            width: 100%; /* 每張圖片寬度 100% */
+            max-width: 100%; /* 確保不會超過容器寬度 */
+            object-fit: cover;
+        }
+
+        .carousel-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .carousel-buttons button {
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+
+        .carousel-buttons button:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .info-section {
+            padding: 2rem;
+            background: #f4f4f4;
+        }
+
+        .info-section h2 {
+            margin-top: 0;
+        }
+
+        footer {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        .extra-content {
+            padding: 2rem;
+            background: #fff;
+            text-align: center;
+        }
+
+        .extra-content h2 {
+            margin-bottom: 1rem;
+        }
+
+        .extra-content p {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding: 2rem;
+            justify-content: center;
+            background: #f4f4f4;
+        }
+
+        .image-gallery img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .main-image {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .main-image img {
+            width: 60%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>永劫無間</h1>
+        <nav>
+            <a href="#about">遊戲介紹</a>
+            <a href="#carousel">遊戲特色</a>
+            <a href="#info">相關資訊</a>
+            <div class="dropdown">
+                <a href="#">快速連結</a>
+                <div class="dropdown-content">
+                    <a href="#about">介紹</a>
+                    <a href="#carousel">特色</a>
+                    <a href="#info">資訊</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="main-image">
+        <img src="https://th.bing.com/th/id/OIP.6Jxr5b-lV67fu_3y-S5AsgHaEK?w=277&h=180&c=7&r=0&o=5&dpr=2&pid=1.7" alt="主圖片">
+    </section>
+
+    <section id="carousel" class="carousel">
+        <div class="carousel-images">
+            <img src="https://th.bing.com/th/id/OIP.mw-g-IVd_vBMp5tou1k8bwHaEK?w=300&h=180&c=7&r=0&o=5&dpr=2&pid=1.7" alt="特色1">
+            <img src="https://th.bing.com/th/id/OIP.4lAuqamiYTMP9fWovFuNZgHaEP?w=293&h=180&c=7&r=0&o=5&dpr=2&pid=1.7" alt="特色2">
+            <img src="https://th.bing.com/th/id/OIP.PIRGJGZUL_aAEuWdRYvznQHaEK?w=301&h=180&c=7&r=0&o=5&dpr=2&pid=1.7" alt="特色3">
+        </div>
+        <div class="carousel-buttons">
+            <button id="prev">&#10094;</button>
+            <button id="next">&#10095;</button>
+        </div>
+    </section>
+
+    <section id="about" class="info-section">
+        <h2>關於永劫無間</h2>
+        <p>
+        《永劫無間》（Naraka: Bladepoint）是一款由中國遊戲公司 24 Entertainment 開發並由 網易發行的多人動作競技遊戲，於 2021 年 8 月 12 日 正式發售。這款遊戲以武俠風格和快節奏的近戰戰鬥為特色，結合了多樣化的英雄角色、爽快的打擊感，以及自由度極高的移動和探索方式，吸引了大量玩家的關注。
+        <br>
+        遊戲特色<br>
+        <h4>武俠風格：</h4>
+        《永劫無間》以東方武俠文化為背景，融合了劍術、內功、輕功等經典元素，營造出濃厚的武俠氛圍。<br>
+        <h4>角色選擇：</h4>
+        遊戲中有多個擁有不同技能的英雄角色（如天海、寧紅夜等），玩家可以根據自己的玩法選擇最適合的角色，並利用英雄技能在戰鬥中取得優勢。<br>
+        <h4>快節奏戰鬥：</h4>
+        遊戲以第三人稱視角進行，核心戰鬥系統包括近戰武器（如刀、長槍）和遠程武器（如弓、弩），需要玩家熟練掌握連招和反應技巧。<br>
+        格擋與反擊（稱為「拆招」）是戰鬥的核心機制。<br>
+        <h4>高自由度的移動：</h4>
+        玩家可以利用鉤索在地圖間自由穿梭，實現飛簷走壁和快速追擊或撤退，增強遊戲的策略深度。<br>
+        <h4>多人競技模式：</h4>
+        主要以大逃殺（Battle Royale）為核心玩法，最多支持 60 名玩家同場競技，最後生存的玩家或小隊獲勝。<br>
+        也提供 3v3 團隊競技模式，讓玩家體驗更緊湊的合作對抗。<br>
+        <h4>精緻畫面與細節：</h4>
+        遊戲採用虛幻引擎，畫面精美，地圖設計具有濃厚的東方風情，包括山水、村莊、城堡等場景。<br>
+        <h4>遊戲模式:</h4>
+        單人模式：挑戰個人技術，在所有玩家中脫穎而出。<br>
+        組隊模式：與好友組隊，進行默契配合。<br>
+        限時活動：不定期推出的特別模式，讓玩家體驗不同玩法。<br>
+        購買與平台<br>
+        《永劫無間》最初在 PC（通過 Steam 和 Epic Games Store）和 Xbox 平台發行，後來也推出了主機版。目前遊戲已改為 免費遊玩 模式，吸引了更多新玩家加入。<br>
+        </p>
+    </section>
+
+    <section id="gallery" class="image-gallery">
+        <img src="https://th.bing.com/th/id/OIP.QaTfPd_q-9RsfuzGlQ0RHgHaD-?w=323&h=180&c=7&r=0&o=5&dpr=2&pid=1.7" alt="角色1">
+        <img src="https://th.bing.com/th/id/OIP.nx-UVODXzIwnQZ6MnZxm9gHaEL?w=309&h=180&c=7&r=0&o=5&dpr=2&pid=1.7" alt="角色2">
+        <img src="https://th.bing.com/th/id/OIP.hU-kd1nBN2r3y1SJjwMDQwHaDH?w=350&h=147&c=7&r=0&o=5&dpr=2&pid=1.7" alt="場景1">
+        <img src="https://th.bing.com/th/id/OIP.sBaaMrOJ-rdLKc03BU6gHQHaEK?w=303&h=181&c=7&r=0&o=5&dpr=2&pid=1.7" alt="場景2">
+    </section>
+
+    <section id="info" class="info-section">
+        <h2>遊戲資訊</h2>
+        <ul>
+            <li>開發商：24 Entertainment</li>
+            <li>平台：PC、PlayStation、Xbox</li>
+            <li>發售日期：2021年8月12日</li>
+        </ul>
+    </section>
+
+    <section class="extra-content">
+        <h2>玩家評價</h2>
+        <p>永劫無間廣受玩家好評，其緊湊的戰鬥節奏與精美的美術風格深受玩家喜愛。</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 永劫無間自製網站</p>
+    </footer>
+
+    <script>
+        const images = document.querySelector('.carousel-images');
+        const totalImages = images.children.length;
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
+        let currentIndex = 0;
+
+        function updateCarousel() {
+            images.style.transform = `translateX(-${currentIndex * 33.3333}%)`; 
+        }
+
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+            updateCarousel();
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % totalImages;
+            updateCarousel();
+        });
+    </script>
+</body>
+</html>
